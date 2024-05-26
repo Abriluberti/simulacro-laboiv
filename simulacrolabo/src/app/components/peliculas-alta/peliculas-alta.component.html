@@ -1,0 +1,64 @@
+<div class="container screen-container">
+    <div class="screen">
+        <form>
+            <h2>Peliculas</h2>
+            <div class="field">
+                <span class="text-feild">Nombre </span>
+                <input type="text" class="login-input" placeholder="Nombre" [(ngModel)]="nombre" name="nombre">
+            </div>
+            <div class="field">
+                <span class="text-feild">Tipo </span>
+                <div class="radio-button">
+                    <div>
+                        <input type="radio" id="amor-radio" name="radios" [(ngModel)]="tipo" value="Amor" checked>
+                        <label for="amor-radio">Amor</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="terror-radio" name="radios" [(ngModel)]="tipo" value="Terror">
+                        <label for="terror-radio">Terror</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="comedia-radio" name="radios" [(ngModel)]="tipo" value="Comedia">
+                        <label for="comedia-radio">Comedia</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="otros-radio" name="radios" [(ngModel)]="tipo" value="Otros">
+                        <label for="otros-radio">Otros</label>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <span class="text-feild">Fecha de estreno </span>
+                <input type="date" class="login-input" [(ngModel)]="fechaEstreno" name="fechaEstreno">
+            </div>
+            <div class="field">
+                <span class="text-feild">Cantidad de publico </span>
+                <input type="text" class="login-input" placeholder="Cantidad publico" [(ngModel)]="cantidadPublico" name="cantidadPublico">
+            </div>
+            <div class="field">
+                <span class="text-feild">Actor </span>
+                <input type="text" class="login-input" placeholder="Actor" [(ngModel)]="actor" name="actor">
+            </div>
+            <div class="field">
+                <span class="text-feild">Imagen </span>
+                <input type="file" class="input-group-prepend" (change)="onImageSelected($event)" accept="image/*">
+            </div>
+            <div class="d-flex justify-content-center align-items-center" *ngIf="foto">
+                <img class="image" [src]="foto" alt="Imagen seleccionada">
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-dark">
+                    <span (click)="OnCancelClick()" class="button__text">Cancelar</span>
+                </button>
+                <button type="button" class="btn btn-success">
+                    <span (click)="OnSaveClick()" class="button__text">Guardar</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="screen-container col-sm-12">
+        <div class="screen" style="width: 600px;">
+            <app-tabla-actores  (actorsData)="receiveActors($event)" ></app-tabla-actores>
+        </div>
+    </div>
+</div>

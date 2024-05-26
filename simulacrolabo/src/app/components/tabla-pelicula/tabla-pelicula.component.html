@@ -1,0 +1,10 @@
+<div class="peliculas-grid">
+  
+  <div *ngFor="let pelicula of peliculas" class="pelicula-item" (click)="seleccionarPelicula(pelicula)">
+    <img [src]="pelicula.foto" alt="{{ pelicula.nombre }}">
+    <h3>{{ pelicula.nombre }}</h3>
+    <p>Tipo: {{ pelicula.tipo }}</p>
+    <p>Fecha de Estreno: {{ pelicula.fechaEstreno | date }}</p>
+    <p>Cantidad de Público: {{ pelicula.cantidadPublico }}</p>
+  </div>
+</div>

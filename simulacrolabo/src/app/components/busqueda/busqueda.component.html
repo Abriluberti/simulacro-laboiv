@@ -1,0 +1,6 @@
+<div>
+    <h1>Busqueda de Películas</h1>
+    <app-tabla-pelicula [peliculas]="(peliculas$ | async) ?? []" (peliculaSeleccionada)="mostrarDetalle($event)"></app-tabla-pelicula>
+    <app-detalle-pelicula [pelicula]="peliculaSeleccionada"></app-detalle-pelicula>
+  </div>
+  

@@ -1,0 +1,51 @@
+
+input{
+    background-color: #2E2C28;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.country-list-container {
+    max-height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .country-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .country-card {
+    flex-basis: calc(33.33% - 16px);
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 16px;
+    transition: background-color 0.3s; 
+  }
+  
+  .country-card.selected {
+    background-color: #2E2C28; 
+    color: #fff; 
+  }
+  
+  .country-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  .country-card p {
+    text-align: center;
+  }
+  

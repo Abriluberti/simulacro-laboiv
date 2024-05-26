@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="formulario">
+      <!-- Campos de entrada para los datos del actor -->
+      <h1>Alta de Actores</h1>
+      <form (ngSubmit)="agregarActor()" novalidate>
+        <!-- Campos de entrada para nombre, apellido y edad -->
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" [(ngModel)]="nombre" name="nombre" required>
+        
+        <label for="apellido">Apellido:</label>
+        <input id="apellido" [(ngModel)]="apellido" name="apellido" required>
+        
+        <label for="edad">Edad:</label>
+        <input id="edad" [(ngModel)]="edad" name="edad" type="number" required>
+        
+        <label for="pais">País:</label>
+        <input type="text" class="login-input" [(ngModel)]="pais" readonly name="pais">
+        <!-- Botón para agregar actor -->
+        <button type="submit">Agregar Actor</button>
+      </form>
+      
+    </div>
+  
+    <!-- Componente de tabla de países -->
+<!-- Componente de tabla de países -->
+<div class="tabla-paises">
+    <app-tabla-paises (paisSeleccionado)="onPaisSeleccionado($event)"></app-tabla-paises>
+
+</div>
+
+  </div>
+  

@@ -1,0 +1,103 @@
+[debug] [2024-05-26T21:21:49.635Z] ----------------------------------------------------------------------
+[debug] [2024-05-26T21:21:49.637Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2024-05-26T21:21:49.638Z] CLI Version:   13.10.0
+[debug] [2024-05-26T21:21:49.638Z] Platform:      win32
+[debug] [2024-05-26T21:21:49.638Z] Node Version:  v20.12.2
+[debug] [2024-05-26T21:21:49.638Z] Time:          Sun May 26 2024 18:21:49 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-05-26T21:21:49.638Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-26T21:21:49.710Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-26T21:21:49.715Z] > authorizing via signed-in user (abriluberti11@gmail.com)
+[debug] [2024-05-26T21:21:49.716Z] [iam] checking project simulacro-18912 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-26T21:21:49.718Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacro-18912:testIamPermissions [none]
+[debug] [2024-05-26T21:21:49.719Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacro-18912:testIamPermissions x-goog-quota-user=projects/simulacro-18912
+[debug] [2024-05-26T21:21:49.719Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacro-18912:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:21:50.682Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacro-18912:testIamPermissions 200
+[debug] [2024-05-26T21:21:50.683Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacro-18912:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:21:50.686Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simulacro-18912 [none]
+[debug] [2024-05-26T21:21:51.081Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simulacro-18912 200
+[debug] [2024-05-26T21:21:51.081Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simulacro-18912 {"projectId":"simulacro-18912","projectNumber":"196774474873","displayName":"simulacro","name":"projects/simulacro-18912","resources":{"hostingSite":"simulacro-18912"},"state":"ACTIVE","etag":"1_d48b873b-a421-4f88-af56-93678339593f"}
+[info] 
+[info] === Deploying to 'simulacro-18912'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-26T21:21:51.087Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions [none]
+[debug] [2024-05-26T21:21:51.087Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-26T21:21:52.389Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions 200
+[debug] [2024-05-26T21:21:52.389Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions {"name":"projects/196774474873/sites/simulacro-18912/versions/582969e317b442e7","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[simulacro-18912]: beginning deploy... 
+[info] i  hosting[simulacro-18912]: found 7 files in y 
+[debug] [2024-05-26T21:21:52.397Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-26T21:21:52.398Z] [hosting] hash cache [eQ] not populated
+[debug] [2024-05-26T21:21:52.435Z] [hosting] hash cache [eQ] stored for 7 files
+[debug] [2024-05-26T21:21:52.435Z] [hosting][hash queue][FINAL] {"max":33,"min":4,"avg":10.428571428571429,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":37}
+[debug] [2024-05-26T21:21:52.436Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/196774474873/sites/simulacro-18912/versions/582969e317b442e7:populateFiles [none]
+[debug] [2024-05-26T21:21:52.436Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/196774474873/sites/simulacro-18912/versions/582969e317b442e7:populateFiles {"files":{"/styles-5INURTSO.css":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e","/chunk-MLL3PCVA.js":"b3a3ec870c58035c53391c66f8619dbc59f51383df95751ba4a499d94bb6c81a","/index.html":"eb6d0856cd171e6f6da8d40496bd72e93fed7fdba88b4a3ffb8330a42a12ad6d","/polyfills-A7MJM4D4.js":"7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2","/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/chunk-5DLNJBMX.js":"73c9fb07d5811bd6efa56f19c331fb16f3f772e6a0a926591189833e00eb949f","/main-67YOFQF3.js":"d0cd203ed9b0c5ac54a34a8423af0a3b2fcecb8036ff6a6a235a9c7c478d198f"}}
+[debug] [2024-05-26T21:21:52.680Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/196774474873/sites/simulacro-18912/versions/582969e317b442e7:populateFiles 200
+[debug] [2024-05-26T21:21:52.680Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/196774474873/sites/simulacro-18912/versions/582969e317b442e7:populateFiles {"uploadRequiredHashes":["73c9fb07d5811bd6efa56f19c331fb16f3f772e6a0a926591189833e00eb949f","d0cd203ed9b0c5ac54a34a8423af0a3b2fcecb8036ff6a6a235a9c7c478d198f","46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e","b3a3ec870c58035c53391c66f8619dbc59f51383df95751ba4a499d94bb6c81a","eb6d0856cd171e6f6da8d40496bd72e93fed7fdba88b4a3ffb8330a42a12ad6d","7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2","a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files"}
+[debug] [2024-05-26T21:21:52.683Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/73c9fb07d5811bd6efa56f19c331fb16f3f772e6a0a926591189833e00eb949f [none]
+[debug] [2024-05-26T21:21:52.683Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/73c9fb07d5811bd6efa56f19c331fb16f3f772e6a0a926591189833e00eb949f [stream]
+[debug] [2024-05-26T21:21:52.685Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/d0cd203ed9b0c5ac54a34a8423af0a3b2fcecb8036ff6a6a235a9c7c478d198f [none]
+[debug] [2024-05-26T21:21:52.686Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/d0cd203ed9b0c5ac54a34a8423af0a3b2fcecb8036ff6a6a235a9c7c478d198f [stream]
+[debug] [2024-05-26T21:21:52.687Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e [none]
+[debug] [2024-05-26T21:21:52.688Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e [stream]
+[debug] [2024-05-26T21:21:52.689Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/b3a3ec870c58035c53391c66f8619dbc59f51383df95751ba4a499d94bb6c81a [none]
+[debug] [2024-05-26T21:21:52.689Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/b3a3ec870c58035c53391c66f8619dbc59f51383df95751ba4a499d94bb6c81a [stream]
+[debug] [2024-05-26T21:21:52.691Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/eb6d0856cd171e6f6da8d40496bd72e93fed7fdba88b4a3ffb8330a42a12ad6d [none]
+[debug] [2024-05-26T21:21:52.691Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/eb6d0856cd171e6f6da8d40496bd72e93fed7fdba88b4a3ffb8330a42a12ad6d [stream]
+[debug] [2024-05-26T21:21:52.692Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2 [none]
+[debug] [2024-05-26T21:21:52.693Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2 [stream]
+[debug] [2024-05-26T21:21:52.695Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 [none]
+[debug] [2024-05-26T21:21:52.695Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 [stream]
+[debug] [2024-05-26T21:21:52.697Z] [hosting][populate queue][FINAL] {"max":250,"min":250,"avg":250,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":264}
+[debug] [2024-05-26T21:21:52.697Z] [hosting] uploads queued: 7
+[debug] [2024-05-26T21:21:53.682Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 200
+[debug] [2024-05-26T21:21:53.682Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 [stream]
+[debug] [2024-05-26T21:21:54.095Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e 200
+[debug] [2024-05-26T21:21:54.096Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e [stream]
+[info] i  hosting: uploading new files [2/7] (28%) 
+[debug] [2024-05-26T21:21:54.784Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/d0cd203ed9b0c5ac54a34a8423af0a3b2fcecb8036ff6a6a235a9c7c478d198f 200
+[debug] [2024-05-26T21:21:54.785Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/d0cd203ed9b0c5ac54a34a8423af0a3b2fcecb8036ff6a6a235a9c7c478d198f [stream]
+[debug] [2024-05-26T21:21:54.816Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2 200
+[debug] [2024-05-26T21:21:54.817Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2 [stream]
+[debug] [2024-05-26T21:21:55.043Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/b3a3ec870c58035c53391c66f8619dbc59f51383df95751ba4a499d94bb6c81a 200
+[debug] [2024-05-26T21:21:55.044Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/b3a3ec870c58035c53391c66f8619dbc59f51383df95751ba4a499d94bb6c81a [stream]
+[debug] [2024-05-26T21:21:55.055Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/73c9fb07d5811bd6efa56f19c331fb16f3f772e6a0a926591189833e00eb949f 200
+[debug] [2024-05-26T21:21:55.055Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/73c9fb07d5811bd6efa56f19c331fb16f3f772e6a0a926591189833e00eb949f [stream]
+[debug] [2024-05-26T21:21:55.191Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/eb6d0856cd171e6f6da8d40496bd72e93fed7fdba88b4a3ffb8330a42a12ad6d 200
+[debug] [2024-05-26T21:21:55.192Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simulacro-18912/versions/582969e317b442e7/files/eb6d0856cd171e6f6da8d40496bd72e93fed7fdba88b4a3ffb8330a42a12ad6d [stream]
+[debug] [2024-05-26T21:21:55.192Z] [hosting][upload queue][FINAL] {"max":2510,"min":1000,"avg":1985.857142857143,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":2511}
+[info] i  hosting: upload complete 
+[info] +  hosting[simulacro-18912]: file upload complete 
+[debug] [2024-05-26T21:21:55.194Z] [hosting] deploy completed after 2803ms
+[debug] [2024-05-26T21:21:55.194Z] [
+  {
+    "config": {
+      "public": "y",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "simulacro-18912"
+    },
+    "version": "projects/196774474873/sites/simulacro-18912/versions/582969e317b442e7"
+  }
+]
+[info] i  hosting[simulacro-18912]: finalizing version... 
+[debug] [2024-05-26T21:21:55.197Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions/582969e317b442e7 updateMask=status%2Cconfig
+[debug] [2024-05-26T21:21:55.198Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions/582969e317b442e7 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-05-26T21:21:55.465Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions/582969e317b442e7 200
+[debug] [2024-05-26T21:21:55.465Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/versions/582969e317b442e7 {"name":"projects/196774474873/sites/simulacro-18912/versions/582969e317b442e7","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-05-26T21:21:51.940605Z","createUser":{"email":"abriluberti11@gmail.com"},"finalizeTime":"2024-05-26T21:21:55.238019Z","finalizeUser":{"email":"abriluberti11@gmail.com"}}
+[debug] [2024-05-26T21:21:55.466Z] [hosting] finalized version for simulacro-18912:[object Object]
+[info] +  hosting[simulacro-18912]: version finalized 
+[info] i  hosting[simulacro-18912]: releasing new version... 
+[debug] [2024-05-26T21:21:55.467Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/channels/live/releases versionName=projects%2F196774474873%2Fsites%2Fsimulacro-18912%2Fversions%2F582969e317b442e7
+[debug] [2024-05-26T21:21:55.467Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/channels/live/releases {}
+[debug] [2024-05-26T21:21:55.799Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacro-18912/channels/live/releases 200
